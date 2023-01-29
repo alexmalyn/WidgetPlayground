@@ -9,23 +9,23 @@ CONFIG += c++17
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    debuggingfilter.cpp \
     hotarea.cpp \
     hotzone.cpp \
     main.cpp \
     mainwindow.cpp \
-    mybeautifulwidget.cpp \
-    resizefilter.cpp \
     resizetrigger.cpp \
+    stackable.cpp \
     titlebar.cpp \
     windowcontrols.cpp
 
 HEADERS += \
+    debuggingfilter.h \
     hotarea.h \
     hotzone.h \
     mainwindow.h \
-    mybeautifulwidget.h \
-    resizefilter.h \
     resizetrigger.h \
+    stackable.h \
     titlebar.h \
     windowcontrols.h
 

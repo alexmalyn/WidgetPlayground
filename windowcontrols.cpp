@@ -18,8 +18,16 @@ CloseButton::CloseButton(QSize size, QWidget *parent)
 
 
 WindowControls::WindowControls(QWidget *parent)
-    : QWidget{parent}
+    : stackable::Widget{parent}
 {
+    setStackableConfig(stackable::Config
+                       {
+                           .horizontalPercentage = 100,
+                           .verticalPercentage = 0,
+                           .horizontalHook = stackable::Hook::Maximum,
+                           .verticalHook = stackable::Hook::Minimum
+                       });
+
     m_minimizeBtn = new MinimizeButton(QSize{100,100}, this);
     m_maximizeBtn = new MaximizeButton(QSize{100,100}, this);
     m_closeBtn = new CloseButton(QSize{100,100}, this);

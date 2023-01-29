@@ -1,9 +1,15 @@
 #include "hotzone.h"
+#include <QDebug>
 
 HotZone::HotZone(QWidget *parent)
-    : StackableWidget(parent)
+    : stackable::Widget(parent)
 {
-    setStackableConfig(StackableConfig{0,0,true});
+    setObjectName("HotZone");
+    setStackableConfig(stackable::Config
+                        {
+                           .horizontalPercentage = 0,
+                           .verticalPercentage = 0,
+                        });
 
     if (!m_pixmap.load("F:/Media/Wallpapers/Wallpapers/d8rhoj7esbg31.png")) {
         qDebug() << "loading did not work";

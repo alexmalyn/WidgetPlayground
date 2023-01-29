@@ -1,8 +1,11 @@
 #ifndef WINDOWCONTROLS_H
 #define WINDOWCONTROLS_H
 
+#include "stackable.h"
+
 #include <QWidget>
 #include <QPushButton>
+
 
 class MinimizeButton : public QPushButton
 {
@@ -23,7 +26,7 @@ public:
     explicit CloseButton(QSize size, QWidget* parent = nullptr);
 };
 
-class WindowControls : public QWidget
+class WindowControls : public stackable::Widget
 {
     Q_OBJECT
 

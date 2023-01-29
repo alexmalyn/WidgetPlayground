@@ -1,9 +1,12 @@
 #ifndef HOTZONE_H
 #define HOTZONE_H
 
-#include "mybeautifulwidget.h"
+#include "stackable.h"
 
-class HotZone : public StackableWidget
+#include <QPixmap>
+#include <QLabel>
+
+class HotZone : public stackable::Widget
 {
     Q_OBJECT
 

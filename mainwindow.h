@@ -16,5 +16,9 @@ public:
     ~MainWindow();
 
     bool eventFilter(QObject* watched, QEvent* event) override;
+
+signals:
+
+    void resizeSignal(QSize oldSize, QSize size);
 };
 #endif // MAINWINDOW_H
